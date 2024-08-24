@@ -1,0 +1,36 @@
+.banner{
+    padding-top: 210px;
+    &-content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        @media screen and (max-width:1095px) {
+            justify-content: center;
+        }
+        &__title{
+            @include text(46px, 800 , 59.8px, #050505);
+            margin-bottom: 42px;
+        }
+        &__subtitle{
+            @include text(24px, 500 , 31.2px, #5A5A5A);
+            margin-bottom: 100px;
+        }
+        &__image{
+            width: 530px;
+            height: 541px;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+}
+.button{
+    @include btn(10px , 13px 36px);
+    transition: 0.1s;
+    &:hover{
+        background: #050505;
+    }
+}

@@ -1,0 +1,7 @@
+.about{
+    padding: 80px 0;
+    &-text{
+        margin-top: 20px;
+        @include text(18px, 500 , 31.2px, #5A5A5A);
+    }
+}

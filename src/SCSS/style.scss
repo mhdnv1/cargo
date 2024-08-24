@@ -1,0 +1,47 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    resize: none;
+    font-family: "Manrope", sans-serif;
+}
+body{
+    background: linear-gradient(to right,#FFFBF0 , #FEFDF8 ,#FCFCFC, #F7F9FE , #F1F6FE, #ECF2FE , #EAF0FE);
+}
+.container{
+    max-width: 1280px;
+    width: 100%;
+    padding:0 20px;
+    margin: 0 auto;
+}
+$blueColor :#014DF5;
+@mixin text($fS , $fW , $lH , $c){
+    font-size:$fS ;
+    font-weight:$fW;
+    line-height:$lH;
+    color:$c;
+}
+@mixin btn($bR , $p){
+    border-radius: $bR;
+    padding: $p;
+    background:$blueColor;
+    color: #fff;
+    outline: 0;
+    border: none;
+    cursor: pointer;
+}
+.section-title{
+    @include text(46px, 800 , 59.8px, #050505);
+}
+@import './header.scss';
+@import './banner.scss';
+@import './services.scss';
+@import './price.scss';
+@import './about.scss';
+@import './slider.scss';
+@import './socila.scss';
+@import './contacts.scss';
+@import './footer.scss';
+@import './modal.scss'
