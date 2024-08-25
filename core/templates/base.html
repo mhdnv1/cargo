@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Профессиональная карго-доставка и логистические услуги. Международные грузоперевозки с отслеживанием груза и быстрым оформлением документов.">
+    <meta name="keywords"
+        content="карго-доставка, международные грузоперевозки, логистика, доставка грузов, транспортировка, таможенное оформление, кара-суу , ош, андижан, Кыргызстан , Узбекстан ">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Карго-доставка и логистика">
+    <meta property="og:description"
+        content="Надежные международные грузоперевозки и логистические решения. Доставка товаров по всему миру.">
+    <meta property="og:image" content="https://example.com/images/cargo.jpg">
+    <meta property="og:url" content="https://example.com/cargo-services">
+    <meta name="language" content="ru">
+    <meta name="author" content="Code Run">
+    <title>Карго-доставка и логистика | Международные грузоперевозки </title>
+    <link rel="stylesheet" href="{% static 'src/CSS/style.css' %} ">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css  ">
+</head>
+
+<body>
+
+{% block content %}
+    
+{% endblock content %}
+
+<script src="{% static 'src/JS/main.js' %} "></script>
+<script charset="utf-8" src="https://widgets.2gis.com/js/DGWidgetLoader.js"></script>
+<script charset="utf-8">
+new DGWidgetLoader({
+"width": "100%", /* Ширина карты будет 100% от родительского контейнера */
+"height": 0, /* Высота карты по умолчанию 0, чтобы использовать padding-bottom для адаптивности */
+"borderColor": "#a3a3a3",
+"pos": {
+  "lat": 55.92124343846354,
+  "lon": 37.76535272598267,
+  "zoom": 16
+},
+"opt": {
+  "city": "moscow"
+},
+"org": [{
+  "id": "70000001054825171"
+}]
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    
+
+{% include 'components/navbar.html' %}
+    <main>
+        {% include 'components/sections/social.html' %}
+        {% include 'components/sections/banner.html' %}
+        {% include 'components/sections/services.html' %}
+        {% include 'components/sections/price.html' %}
+        {% include 'components/sections/about.html' %}
+        {% include 'components/sections/contacts.html' %}
+    </main>
+{% include 'components/footer.html' %}
+
+
+{% endblock content %}
+ 
