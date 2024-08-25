@@ -18,11 +18,12 @@ from django.contrib import admin
 from django.urls import path, include
 from OshCargo import settings
 from django.conf.urls.static import static
-from core.views import index
+from core.views import index, add_req
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index, name='index')
+    path('', index, name='index'),
+    path('add/req/', add_req, name='add_req')
 ]
 
 

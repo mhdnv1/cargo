@@ -33,24 +33,18 @@
 
 <script src="{% static 'src/JS/main.js' %} "></script>
 <script charset="utf-8" src="https://widgets.2gis.com/js/DGWidgetLoader.js"></script>
-<script charset="utf-8">
-new DGWidgetLoader({
-"width": "100%", /* Ширина карты будет 100% от родительского контейнера */
-"height": 0, /* Высота карты по умолчанию 0, чтобы использовать padding-bottom для адаптивности */
-"borderColor": "#a3a3a3",
-"pos": {
-  "lat": 55.92124343846354,
-  "lon": 37.76535272598267,
-  "zoom": 16
-},
-"opt": {
-  "city": "moscow"
-},
-"org": [{
-  "id": "70000001054825171"
-}]
-});
+<script>
+  function initMap() {
+      // Создаем объект карты и задаем координаты и уровень зума
+      var mapOptions = {
+          center: {lat: 55.751244, lng: 37.618423}, // Координаты Москвы
+          zoom: 10
+      };
+      var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+  }
 </script>
-
+<script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+</script>
 </body>
 </html>

@@ -414,8 +414,8 @@ body {
 }
 .social {
   position: fixed;
-  bottom: 100px;
-  left: 5%;
+  bottom: 0px;
+  left: 3%;
   z-index: 1000;
 }
 .social div {
@@ -424,9 +424,9 @@ body {
 }
 .social div i {
   position: relative;
-  font-size: 100px;
-  top: 20px;
-  left: 20px;
+  font-size: 70px;
+  top: 15px;
+  left: 15px;
   color: #EEFFFE;
 }
 
@@ -438,8 +438,8 @@ body {
 .sonar-emitter {
   position: relative;
   margin: 32px auto;
-  width: 140px;
-  height: 140px;
+  width: 100px;
+  height: 100px;
   border-radius: 9999px;
   background-color: #71C8F8;
 }

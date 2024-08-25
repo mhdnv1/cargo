@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% load section_tag %}
 
 {% block content %}
     
@@ -7,10 +7,10 @@
 {% include 'components/navbar.html' %}
     <main>
         {% include 'components/sections/social.html' %}
-        {% include 'components/sections/banner.html' %}
-        {% include 'components/sections/services.html' %}
+        {% banner %}
+        {% services %}
         {% include 'components/sections/price.html' %}
-        {% include 'components/sections/about.html' %}
+        {% about %}
         {% include 'components/sections/contacts.html' %}
     </main>
 {% include 'components/footer.html' %}

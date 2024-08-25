@@ -12,18 +12,14 @@
             </svg>
         </span>
         <div class="price-cards">
-            <div class="price-card">
-                <h3 class="price-card__title">Кыргызстан</h3>
-                <p class="price-card__text">Минимальный вес для нашей доставки составляет 10 кг, включая услуги
-                    по таможенному оформлению.</p>
-                <div class="price-card__price">25c / за 1 кг.</div>
-            </div>
-            <div class="price-card">
-                <h3 class="price-card__title">Россия</h3>
-                <p class="price-card__text">Минимальный вес для нашей доставки составляет 10 кг, включая услуги
-                    по таможенному оформлению.</p>
-                <div class="price-card__price">45руб / за 1 кг.</div>
-            </div>
+            
+            {% for service in services %}    
+                <div class="price-card">
+                    <h3 class="price-card__title">{{service.country}}</h3>
+                    <p class="price-card__text">{{service.text}}</p>
+                    <div class="price-card__price">{{service.price}} / за 1 кг.</div>
+                </div>
+            {% endfor %}
         </div>
     </div>
 </section>
