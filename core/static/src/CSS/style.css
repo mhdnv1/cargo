@@ -494,11 +494,22 @@ body {
   align-items: center;
   position: relative;
 }
-@media screen and (max-width: 1300px) {
+@media screen and (min-width: 768px) {
+  .contacts-cards {
+    justify-content: center;
+    
+  }
+  .contacts-card__adrress {
+    width: 45% !important;
+  }
+}
+
+@media screen and (min-width: 1200px) {
   .contacts-cards {
     justify-content: center;
   }
 }
+
 .contacts-card {
   width: 100%;
 }
@@ -509,6 +520,7 @@ body {
   column-gap: 140px;
   flex-wrap: wrap;
   border-bottom: 1px solid #5A5A5A;
+  width: 100%;
 }
 .contacts-card__adrress div {
   display: flex;
@@ -521,6 +533,7 @@ body {
   font-weight: 700;
   line-height: 31.2px;
   color: #050505;
+  width: 100%;
 }
 .contacts-card__adrress__tel a {
   font-size: 18px;
@@ -530,27 +543,14 @@ body {
 }
 
 .contacts-card.map {
-  max-width: 100%; /* Карта занимает всю ширину контейнера */
+  width: 100%;
+  height: 400px;
   margin: 0 auto; /* Центрируем карту */
-  position: relative;
 }
 
-.contacts-card.map iframe,
-.contacts-card.map .dg-widget-link {
-  width: 100%; /* Ширина карты всегда 100% */
-  height: 0;
-  padding-bottom: 56.25%; /* Соотношение сторон 16:9 */
-  position: relative;
-}
-
-.contacts-card.map iframe,
-.contacts-card.map .dg-widget-link iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
+.contacts-card.map iframe {
   width: 100%;
   height: 100%;
-  border: 0;
 }
 
 .footer {
@@ -619,4 +619,18 @@ body {
   display: none;
 }
 
+.res_main {
+  height: 600px; 
+  width: 60%; 
+  margin: auto; 
+  margin-top: 300px; 
+  font-size: 20px;
+  text-align: center;
+}
+
+@media screen and (min-width: 600px) {
+  .res_main {
+    font-size: 40px;
+  }
+}
 /*# sourceMappingURL=style.css.map */

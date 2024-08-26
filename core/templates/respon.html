@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load section_tag %}
+
+{% block content %}
+    
+
+    <main class="res_main" >
+        
+        {% if errors %}
+            <h4>{{errors.phone}}</h4>
+        {% else %}
+            <h4>Ваш запрос был успешно отправлен.</h4>
+        {% endif %}
+            <a href="{% url 'index' %}"><button class="button">Вернуться назад</button></a>
+    </main>
+
+
+{% endblock content %}
+ 

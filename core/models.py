@@ -9,7 +9,7 @@ class Setting(models.Model):
     phone = models.CharField(verbose_name='Телефон номер', max_length=255)
     link_whatsapp = models.URLField(verbose_name='Ватсап ссылка')
     link_telegram = models.URLField(verbose_name='Телеграм ссылка')
-    address = models.CharField(verbose_name='Адрес', max_length=255)
+    email = models.EmailField(verbose_name='Почта Админа')
     
 
     class Meta:
@@ -73,5 +73,15 @@ class Album(models.Model):
     
 
 
-# class Contact(models.Model):
+class Contact(models.Model):
+    
+    location = models.CharField(verbose_name='Филиал',max_length=255)
+    phone = models.CharField(verbose_name='Телефон номер', max_length=255)
+    
+    class Meta:
+        verbose_name = 'Контакт'
+        verbose_name_plural = 'Контакты'
+        
+    def __str__(self):
+        return f'{self.location} - {self.phone}'
     

@@ -1,4 +1,5 @@
 from django import template 
+from core.forms import OrderForm
 from core.models import *
 
 register = template.Library()
@@ -25,8 +26,10 @@ def services():
 @register.inclusion_tag('components/sections/banner.html')
 def banner():
     section = Section.objects.get(section='Баннер')
+    form = OrderForm()
     context = {
         'section':section,
+        'form':form,
         
     }
     return context

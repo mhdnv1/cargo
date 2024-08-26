@@ -23,14 +23,24 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css  ">
+    <style>
+        /* Определяем размеры карты */
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
 </head>
 
 <body>
+{% include 'components/navbar.html' %}
+
 
 {% block content %}
     
 {% endblock content %}
 
+{% include 'components/footer.html' %}
 <script src="{% static 'src/JS/main.js' %} "></script>
 <script charset="utf-8" src="https://widgets.2gis.com/js/DGWidgetLoader.js"></script>
 <script>

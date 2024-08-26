@@ -11,55 +11,24 @@
                     stroke="#014DF5" stroke-width="5.22371" />
             </svg>
         </span>
-        <div class="contacts-cards">
-            <div class="contacts-card">
-                <div class="contacts-card__adrress">
-                    <div>
-                        <p class="contacts-card__adrress__title">Рынок Садовод линия</p>
-                        <p class="contacts-card__adrress__tel">
-                            <a href="tel:+996990000935">0990000935</a></p>
-                    </div>
-                    <div>
-                        <p class="contacts-card__adrress__title">Казахстан</p>
-                        <p class="contacts-card__adrress__tel">
-                            <a href="tel:+996990000935">0990000935</a></p>
-                    </div>
+        <div class="contacts-cards" >
+                <div class="contacts-card map" >
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6062.406174665748!2d72.88027196897892!3d40.55919639197586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bda946af1f6f93%3A0xc5e2d898732581de!2sKafe%20Zhanysh%20Bayysh!5e0!3m2!1sen!2skg!4v1724660752979!5m2!1sen!2skg" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
-                <div class="contacts-card__adrress">
-                    <div>
-                        <p class="contacts-card__adrress__title">Рынок Садовод линия</p>
-                        <p class="contacts-card__adrress__tel">
-                            <a href="tel:+996990000935">0990000935</a></p>
-                    </div>
-                    <div>
-                        <p class="contacts-card__adrress__title">Казахстан</p>
-                        <p class="contacts-card__adrress__tel">
-                            <a href="tel:+996990000935">0990000935</a></p>
-                    </div>
+                <div class="contacts-cards" style="margin-top: 40px;">
+                    
+                    {% for contact in contacts %}
+                    
+                        <div class="contacts-card__adrress">
+                            <p class="contacts-card__adrress__title">{{contact.location}}</p>
+                            <p class="contacts-card__adrress__tel">
+                                <a href="tel:+996990000935">{{contact.phone}}</a></p>
+                        </div>
+                    {% endfor %}
+                        
                 </div>
-                <div class="contacts-card__adrress">
-                    <div>
-                        <p class="contacts-card__adrress__title">Рынок Садовод линия</p>
-                        <p class="contacts-card__adrress__tel">
-                            <a href="tel:+996990000935">0990000935</a></p>
-                    </div>
-                    <div>
-                        <p class="contacts-card__adrress__title">Казахстан</p>
-                        <p class="contacts-card__adrress__tel">
-                            <a href="tel:+996990000935">0990000935</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="contacts-card map">
-                <a class="dg-widget-link" href="http://2gis.ru/moscow/firm/70000001054825171/center/37.76535272598267,55.92124343846354/zoom/16?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=bigMap">Посмотреть на карте Москвы</a>
-                <div class="dg-widget-link">
-                  <a href="http://2gis.ru/moscow/firm/70000001054825171/photos/70000001054825171/center/37.76535272598267,55.92124343846354/zoom/17?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=photos">Фотографии компании</a>
-                </div>
-                <div class="dg-widget-link">
-                  <a href="http://2gis.ru/moscow/center/37.765342,55.921029/zoom/16/routeTab/rsType/bus/to/37.765342,55.921029╎Андижан, чайхана?utm_medium=widget-source&utm_campaign=firmsonmap&utm_source=route">Найти проезд до Андижан, чайхана</a>
-                </div>
-                <noscript style="color:#c00;font-size:16px;font-weight:bold;">Виджет карты использует JavaScript. Включите его в настройках вашего браузера.</noscript>
-              </div>
+                
+
         </div>
     </div>
 </section>

@@ -37,5 +37,6 @@ class OrderAdmin(admin.ModelAdmin):
     list_per_page = 10
 
 admin.site.register(ServicePrice)
+admin.site.register(Contact)
     
-    
+admin.site.site_header = 'Администрация Ош Карго'
