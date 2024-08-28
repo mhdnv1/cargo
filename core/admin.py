@@ -3,9 +3,12 @@ from core.models import *
 from django.utils.safestring import mark_safe
 # Register your models here.
 
-class SectionInline(admin.TabularInline):
+class SectionInline(admin.StackedInline):
+    fields = ('section', 'text', 'title', 'image')
+    readonly_fields = ('section',)
     model = Section
-    extra = 1
+    extra = 0
+    
     
     
 @admin.register(Setting)

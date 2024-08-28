@@ -10,7 +10,7 @@ class Setting(models.Model):
     link_whatsapp = models.URLField(verbose_name='Ватсап ссылка')
     link_telegram = models.URLField(verbose_name='Телеграм ссылка')
     email = models.EmailField(verbose_name='Почта Админа')
-    
+    location = models.CharField(max_length=2000, verbose_name='локация')
 
     class Meta:
 
@@ -27,10 +27,15 @@ class Section(models.Model):
     section = models.CharField(verbose_name='Название раздел',max_length=255)
     title = models.CharField(verbose_name='Заголовок',max_length=255)
     text = models.TextField(verbose_name='Текст')
+    image = models.ImageField(upload_to='section/', verbose_name='фото', null=True,blank=True)
     setting = models.ForeignKey(Setting, on_delete=models.CASCADE, verbose_name='Настрока', related_name='sections')
     
     def __str__(self) -> str:
-        return f'Раздел {self.title}'
+        return f'{self.title}'
+    
+    class Meta:
+        verbose_name = 'Раздел'
+        verbose_name_plural = 'Разделы'
     
  
 class Order(models.Model):
